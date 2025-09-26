@@ -1,0 +1,8 @@
+*~
+*.o
+*.a
+*.so
+01_*/Show
+a.out
+02_*/prog
+02_*/README
