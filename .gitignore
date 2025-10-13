@@ -9,3 +9,6 @@ a.out
 02_*/result_*
 02_*/prog-a
 02_*/prog-so
+04_*/range
+04_*/actual*
+.gdb_history
