@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: guesser 0.0\n"
+"Report-Msgid-Bugs-To: me!\n"
+"POT-Creation-Date: 2025-11-17 13:26+0300\n"
+"PO-Revision-Date: 2025-11-17 10:34+0300\n"
+"Last-Translator: me!\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/guesser.c:19
+#, fuzzy, c-format
+#| msgid "Think of a number from 1 to 100."
+msgid "Think of a number between 1 and 100.\n"
+msgstr "Придумайте число от 1 до 100."
+
+#: src/guesser.c:25
+#, fuzzy, c-format
+#| msgid "Your number is: %d"
+msgid "Your number: %d\n"
+msgstr "Ваше число: %d"
+
+#: src/guesser.c:30
+#, c-format
+msgid "Is your number bigger than %d? (Yes/No): "
+msgstr "Ваше число больше чем %d? (Да/Нет): "
+
+#: src/guesser.c:33
+#, fuzzy, c-format
+#| msgid "Input error."
+msgid "Input error.\n"
+msgstr "Ошибка ввода."
+
+#: src/guesser.c:46
+#, fuzzy, c-format
+#| msgid "Invalid answer, it should be either yes or no."
+msgid "Invalid answer, it should be either yes or no.\n"
+msgstr "Ответ должен быть да или нет\n."
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "No"
+msgstr "Нет"
