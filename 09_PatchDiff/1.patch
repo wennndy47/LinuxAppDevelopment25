@@ -1,0 +1,88 @@
+diff a/labyrinth.c b/labyrinth.c
+index edecf26..4833452 100644
+--- a/labyrinth.c
++++ b/labyrinth.c
+@@ -5,7 +5,7 @@
+ 
+ int SIZE;
+ int GRID_SIZE;
+-
++char wall, room;
+ 
+ void genMaze(
+     char** maze, 
+@@ -32,7 +32,7 @@ void genMaze(
+         if ((nx >= 0 && nx < SIZE && ny >= 0 && ny < SIZE) && !visited[ny][nx]) {
+             int wallX = x * 2 + 1 + dx[dir];
+             int wallY = y * 2 + 1 + dy[dir];
+-            maze[wallY][wallX] = '.';
++            maze[wallY][wallX] = room;
+             genMaze(maze, visited, nx, ny);
+         }
+     }
+@@ -43,16 +43,16 @@ void addWalls(char** maze, int currentWalls) {
+     while (currentWalls < totalCells * 15 / 100) {
+         int i = rand() % (GRID_SIZE - 2) + 1;
+         int j = rand() % (GRID_SIZE - 2) + 1;
+-        if (maze[i][j] == '.' && (i % 2 == 0 || j % 2 == 0)) {
++        if (maze[i][j] == room && (i % 2 == 0 || j % 2 == 0)) {
+             int isCritical = 0;
+-            maze[i][j] = '#';
++            maze[i][j] = wall;
+             int wallCount = 0;
+             for (int di = -1; di <= 1; di++) {
+                 for (int dj = -1; dj <= 1; dj++) {
+                     if ((di == 0 || dj == 0) && !(di == 0 && dj == 0)) {
+                         int ni = i + di, nj = j + dj;
+                         if (ni >= 0 && ni < GRID_SIZE && nj >= 0 && nj < GRID_SIZE) {
+-                            if (maze[ni][nj] == '#') wallCount++;
++                            if (maze[ni][nj] == wall) wallCount++;
+                         }
+                     }
+                 }
+@@ -60,7 +60,7 @@ void addWalls(char** maze, int currentWalls) {
+             if (wallCount < 3) {
+                 currentWalls++;
+             } else {
+-                maze[i][j] = '.';
++                maze[i][j] = room;
+             }
+         }
+     }
+@@ -68,11 +68,14 @@ void addWalls(char** maze, int currentWalls) {
+ 
+ int main(int argc, char** argv) {
+     srand(time(NULL));
+-    if (argc != 2) {
++    if (argc != 3) {
+         printf("Incorrect number of arguments");
+         return 1;
+     }
+-    SIZE = atoi(argv[1]);
++    char* symbols = argv[1];
++    room = symbols[0];
++    wall = symbols[1];
++    SIZE = atoi(argv[2]);
+     GRID_SIZE = SIZE * 2 + 1;
+     char** maze = (char**)malloc(GRID_SIZE * sizeof(char*));
+     for (int i = 0; i < GRID_SIZE; i++) {
+@@ -88,16 +91,16 @@ int main(int argc, char** argv) {
+     for (int i = 0; i < GRID_SIZE; i++) 
+         for (int j = 0; j < GRID_SIZE; j++)
+             if (i % 2 == 0 || j % 2 == 0)
+-                maze[i][j] = '#';
++                maze[i][j] = wall;
+             else
+-                maze[i][j] = '.';
++                maze[i][j] = room;
+     
+     genMaze(maze, visited, 0, 0);
+     int totalCells = GRID_SIZE * GRID_SIZE;
+     int currentWalls = 0;
+     for (int i = 0; i < GRID_SIZE; i++) {
+         for (int j = 0; j < GRID_SIZE; j++) {
+-            if (maze[i][j] == '#') {
++            if (maze[i][j] == wall) {
+                 currentWalls++;
+             }
+         }

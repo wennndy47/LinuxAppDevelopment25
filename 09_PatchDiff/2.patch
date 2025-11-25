@@ -1,0 +1,25 @@
+diff a/labyrinth.c b/labyrinth.c
+index 4833452..d262e01 100644
+--- a/labyrinth.c
++++ b/labyrinth.c
+@@ -67,15 +67,16 @@ void addWalls(char** maze, int currentWalls) {
+ }
+ 
+ int main(int argc, char** argv) {
+-    srand(time(NULL));
+-    if (argc != 3) {
++    if (argc != 4) {
+         printf("Incorrect number of arguments");
+         return 1;
+     }
+-    char* symbols = argv[1];
++    int seed = atoi(argv[1]);
++    srand(seed);
++    char* symbols = argv[2];
+     room = symbols[0];
+     wall = symbols[1];
+-    SIZE = atoi(argv[2]);
++    SIZE = atoi(argv[3]);
+     GRID_SIZE = SIZE * 2 + 1;
+     char** maze = (char**)malloc(GRID_SIZE * sizeof(char*));
+     for (int i = 0; i < GRID_SIZE; i++) {

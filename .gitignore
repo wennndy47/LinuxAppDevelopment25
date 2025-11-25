@@ -19,3 +19,5 @@ build
 .deps
 m4
 autom4te.cache
+.vscode
+labyrinth
