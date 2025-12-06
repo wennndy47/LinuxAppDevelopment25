@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guesser 0.0\n"
 "Report-Msgid-Bugs-To: me@me.ru\n"
-"POT-Creation-Date: 2025-12-06 17:16+0300\n"
+"POT-Creation-Date: 2025-12-06 17:45+0300\n"
 "PO-Revision-Date: 2025-11-17 10:34+0300\n"
 "Last-Translator: me!\n"
 "Language-Team: Russian\n"
@@ -11,48 +11,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/guesser.c:109
+#: src/guesser.c:125
 #, fuzzy, c-format
 #| msgid "Think of a number from 1 to 100."
 msgid "Think of a number between I and C.\n"
 msgstr "Придумайте число от 1 до 100."
 
-#: src/guesser.c:111
+#: src/guesser.c:127
 #, fuzzy, c-format
 #| msgid "Think of a number from 1 to 100."
 msgid "Think of a number between 1 and 100.\n"
 msgstr "Придумайте число от 1 до 100."
 
-#: src/guesser.c:118
+#: src/guesser.c:134
 #, fuzzy, c-format
 #| msgid "Your number is: %d"
 msgid "Your number: %s\n"
 msgstr "Ваше число: %d"
 
-#: src/guesser.c:120
+#: src/guesser.c:136
 #, fuzzy, c-format
 #| msgid "Your number is: %d"
 msgid "Your number: %d\n"
 msgstr "Ваше число: %d"
 
-#: src/guesser.c:126
+#: src/guesser.c:142
 #, fuzzy, c-format
 #| msgid "Is your number bigger than %d? (Yes/No): "
 msgid "Is your number bigger than %s? (Yes/No): "
 msgstr "Ваше число больше чем %d? (Да/Нет): "
 
-#: src/guesser.c:128
+#: src/guesser.c:144
 #, c-format
 msgid "Is your number bigger than %d? (Yes/No): "
 msgstr "Ваше число больше чем %d? (Да/Нет): "
 
-#: src/guesser.c:132
+#: src/guesser.c:148
 #, fuzzy, c-format
 #| msgid "Input error."
 msgid "Input error.\n"
 msgstr "Ошибка ввода."
 
-#: src/guesser.c:145
+#: src/guesser.c:161
 #, fuzzy, c-format
 #| msgid "Invalid answer, it should be either yes or no."
 msgid "Invalid answer, it should be either yes or no.\n"

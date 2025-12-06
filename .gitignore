@@ -21,3 +21,4 @@ m4
 autom4te.cache
 .vscode
 labyrinth
+doxygen-doc

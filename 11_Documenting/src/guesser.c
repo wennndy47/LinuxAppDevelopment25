@@ -1,9 +1,13 @@
-/** @file guesser.c
-* Implementation
+/** @page library 
+* Number guesser game
 *
 * Program for a number guessing game, where the user is supposed to choose a number between 1 and 100
 * and the program tries to guess it.
 * Supports both roman and arabic numbers.
+*/
+/** @file guesser.c 
+* Implementation
+*
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,6 +68,9 @@ int roman_to_arabic(const char *roman) {
     return -1;
 }
 
+const char *argp_program_version = "guesser 0.1";
+const char *argp_program_bug_address = "<me@me.ru>";
+
 struct arguments {
     int use_roman;
 };
@@ -94,6 +101,15 @@ static char doc[] = "A number guessing game";
 
 static struct argp argp = { options, parse_opt, NULL, doc };
 
+/** @page guesser
+* Number guessing game
+* @section SYNOPSIS
+* `guesser` \a use_roman
+* @section DESCRIPTION
+* Guess a number that was chosen by the user. Use roman numbers if \a use_roman is used.
+*
+* @copydetails library
+*/
 int main(int argc, char** argv) {
     struct arguments arguments;
     arguments.use_roman = 0;
