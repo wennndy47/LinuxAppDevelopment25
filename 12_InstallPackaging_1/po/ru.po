@@ -1,0 +1,256 @@
+# Hangman game.
+# Copyright (C) 2025 Anastasia Sheremeteva
+# This file is distributed under the same license as the hangman package.
+# Anastasia Sheremeteva <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hangman 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-16 01:35+0300\n"
+"PO-Revision-Date: 2025-12-16 01:38+0300\n"
+"Last-Translator:  <me@me.com>\n"
+"Language-Team: Russian <gnu@d07.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: hangman.c:82
+#, c-format
+msgid "Hangman Game version %s\n"
+msgstr "Версия игры Виселица %s\n"
+
+#: hangman.c:89
+#, c-format
+msgid "Usage: hangman [OPTION]\n"
+msgstr "Использование: hangman [ОПЦИИ]\n"
+
+#: hangman.c:90 hangman.c:92 hangman.c:98 hangman.c:102 hangman.c:107
+#, c-format
+msgid "\n"
+msgstr ""
+
+#: hangman.c:91
+#, c-format
+msgid "Word guessing game.\n"
+msgstr "Игра в угадывание слов.\n"
+
+#: hangman.c:93
+#, c-format
+msgid "Options:\n"
+msgstr "Опции:\n"
+
+#: hangman.c:94
+#, c-format
+msgid "  -h, --help           display this help and exit\n"
+msgstr "  -h, --help          вывести эту помощь и завершить работу\n"
+
+#: hangman.c:95
+#, c-format
+msgid "  -v, --version        display version information and exit\n"
+msgstr "  -v, --version       вывести версию и завершить работу\n"
+
+#: hangman.c:96
+#, c-format
+msgid "  -l, --language LANG  set game language (en, ru)\n"
+msgstr "  -l, --language LANG     установить язык игры (en, ru)\n"
+
+#: hangman.c:97
+#, c-format
+msgid ""
+"  -d, --data-dit DATA_DIR  set directory containing word lists (en, ru)\n"
+msgstr ""
+"  -d, --data-dit DATA_DIR  установить папку со списком слов (en, ru)\n"
+
+#: hangman.c:99
+#, c-format
+msgid "Environment variables:\n"
+msgstr "Переменные окружения:\n"
+
+#: hangman.c:100
+#, c-format
+msgid "  LANG                 determines interface language\n"
+msgstr "  LANG                определяет язык интерфейса\n"
+
+#: hangman.c:101
+#, c-format
+msgid "  DATA_DIR                 determines directory with word lists\n"
+msgstr "  DATA_DIR            установка папки со списком слов \n"
+
+#: hangman.c:103
+#, c-format
+msgid "Examples:\n"
+msgstr "Примеры:\n"
+
+#: hangman.c:104
+#, c-format
+msgid "  hangman              start game with default language\n"
+msgstr "  hangman             начинает игру с языком по умолчанию\n"
+
+#: hangman.c:105
+#, c-format
+msgid "  hangman --language ru start game in Russian\n"
+msgstr "  hangman --language ru  начинает игру на русском\n"
+
+#: hangman.c:106
+#, c-format
+msgid "  LANG=ru_RU.UTF-8 hangman  alternative way to set language\n"
+msgstr "  LANG=ru_RU.UTF-8 hangman  альтернативный способ задать язык\n"
+
+#: hangman.c:108
+#, c-format
+msgid "Report bugs to: <me@me.com>\n"
+msgstr "Сообщать о багах: <me@me.com>\n"
+
+#: hangman.c:249
+#, c-format
+msgid "Failed to determine data directory\n"
+msgstr "Ошибка в определении директории со списком слов\n"
+
+#: hangman.c:254 hangman.c:258
+#, c-format
+msgid "Data directory does not exist: %s\n"
+msgstr "Директория со списком слов не существует: %s\n"
+
+#: hangman.c:264
+#, c-format
+msgid "Failed to construct wordlist path\n"
+msgstr "Ошибка в конструировании пути к списку слов.\n"
+
+#: hangman.c:270
+#, c-format
+msgid "Failed to get a word from wordlist.\n"
+msgstr "Ошибка в получении слова из списка слов.\n"
+
+#: hangman.c:393
+#, c-format
+msgid "Word: %s\n"
+msgstr "Слово: %s\n"
+
+#: hangman.c:394
+#, c-format
+msgid "Tries left: %d\n"
+msgstr "Осталось попыток: %d\n"
+
+#: hangman.c:395
+#, c-format
+msgid "Guessed letters: %s\n"
+msgstr "Буквы: %s\n"
+
+#: hangman.c:399 hangman.c:408 hangman.c:417 hangman.c:426 hangman.c:435
+#: hangman.c:444 hangman.c:453
+#, c-format
+msgid "  _______\n"
+msgstr ""
+
+#: hangman.c:400 hangman.c:409 hangman.c:418 hangman.c:420 hangman.c:427
+#: hangman.c:436 hangman.c:445 hangman.c:454
+#, c-format
+msgid "  |     |\n"
+msgstr ""
+
+#: hangman.c:401 hangman.c:402 hangman.c:403 hangman.c:404 hangman.c:411
+#: hangman.c:412 hangman.c:413 hangman.c:421 hangman.c:422 hangman.c:430
+#: hangman.c:431 hangman.c:439 hangman.c:440 hangman.c:449 hangman.c:458
+#, c-format
+msgid "  |\n"
+msgstr ""
+
+#: hangman.c:405 hangman.c:414 hangman.c:423 hangman.c:432 hangman.c:441
+#: hangman.c:450 hangman.c:459
+#, c-format
+msgid "__|________\n"
+msgstr ""
+
+#: hangman.c:410 hangman.c:419 hangman.c:428 hangman.c:437 hangman.c:446
+#: hangman.c:455
+#, c-format
+msgid "  |     O\n"
+msgstr ""
+
+#: hangman.c:429
+#, c-format
+msgid "  |    /|\n"
+msgstr ""
+
+#: hangman.c:438 hangman.c:447 hangman.c:456
+#, c-format
+msgid "  |    /|\\\n"
+msgstr ""
+
+#: hangman.c:448
+#, c-format
+msgid "  |    /\n"
+msgstr ""
+
+#: hangman.c:457
+#, c-format
+msgid "  |    / \\\n"
+msgstr ""
+
+#: hangman.c:480
+#, c-format
+msgid "Welcome to Hangman!\n"
+msgstr "Добро пожаловать в Виселицу!\n"
+
+#: hangman.c:481
+#, c-format
+msgid ""
+"===================\n"
+"\n"
+msgstr ""
+
+#: hangman.c:490
+#, c-format
+msgid "Failed to create game\n"
+msgstr "Ошибка в создании игры\n"
+
+#: hangman.c:495
+#, c-format
+msgid "Failed to load word\n"
+msgstr "Ошибка в загрузке слова\n"
+
+#: hangman.c:502
+#, c-format
+msgid ""
+"\n"
+"Guess a letter: "
+msgstr ""
+"\n"
+"Угадайте букву: "
+
+#: hangman.c:508
+#, c-format
+msgid "Please enter a valid letter\n"
+msgstr "Пожалуйста, введите букву\n"
+
+#: hangman.c:515
+#, c-format
+msgid ""
+"\n"
+"Congratulations! You won!\n"
+msgstr ""
+"\n"
+"Поздравляем! Вы победили!\n"
+
+#: hangman.c:516 hangman.c:519
+#, c-format
+msgid "The word was: %s\n"
+msgstr "Загаданное слово: %s\n"
+
+#: hangman.c:518
+#, c-format
+msgid ""
+"\n"
+"Game over! You lost.\n"
+msgstr ""
+"\n"
+"Игра завершена! Вы проиграли.\n"
+
+#: hangman.c:568
+#, c-format
+msgid "Try 'hangman --help' for more information.\n"
+msgstr "Попробуйте 'hangman --help' чтобы узнать больше.\n"
